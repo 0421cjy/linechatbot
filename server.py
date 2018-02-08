@@ -29,19 +29,11 @@ from linebot.models import (
 )
 from linebot.utils import PY3
 
-# get channel_secret and channel_access_token from your environment variable
-channel_secret = os.getenv('bb9ec7fc7536043f26e842eb073bf1de', None)
-channel_access_token = os.getenv('iWxmWeybGKxC1yddrgluw/c9glJN4RZBtFxecmz5e38sodmKKrqwd0vFA1qy9NMzUukFDPQsLWZKBjZVtYEdxfKOZldwcSDJpHBAZQXBVb0ESxySMOHUdhOFcDu+x/j8ph6O/nDEfFfOYMkq2JLeQQdB04t89/1O/w1cDnyilFU=', None)
-if channel_secret is None:
-    print('Specify LINE_CHANNEL_SECRET as environment variable.')
-    sys.exit(1)
-if channel_access_token is None:
-    print('Specify LINE_CHANNEL_ACCESS_TOKEN as environment variable.')
-    sys.exit(1)
+channel_secret = 'bb9ec7fc7536043f26e842eb073bf1de'
+channel_access_token = 'iWxmWeybGKxC1yddrgluw/c9glJN4RZBtFxecmz5e38sodmKKrqwd0vFA1qy9NMzUukFDPQsLWZKBjZVtYEdxfKOZldwcSDJpHBAZQXBVb0ESxySMOHUdhOFcDu+x/j8ph6O/nDEfFfOYMkq2JLeQQdB04t89/1O/w1cDnyilFU='
 
 line_bot_api = LineBotApi(channel_access_token)
 parser = WebhookParser(channel_secret)
-
 
 def application(environ, start_response):
     # check request path
