@@ -1,0 +1,15 @@
+{
+  "name": "line chatbot test",
+  "description": "The server side for linebot.",
+  "image": "heroku/python",
+  "repository": "https://github.com/0421cjy/linechatbot",
+  "keywords": ["python"],
+  "addons": [ "heroku-postgresql" ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "server.py test"
+      }
+    }
+  }
+}
